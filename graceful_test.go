@@ -1,1 +1,229 @@
-cGFja2FnZSBncmFjZWZ1bAoKaW1wb3J0ICgKCSJjb250ZXh0IgoJImVycm9ycyIKCSJpbyIKCSJuZXQiCgkibmV0L2h0dHAiCgkic3luYy9hdG9taWMiCgkidGVzdGluZyIKCSJ0aW1lIgopCgovLyBmcmVlQWRkciByZXR1cm5zIGEgbG9jYWxob3N0IGFkZHJlc3Mgd2l0aCBhIGN1cnJlbnRseS1mcmVlIHBvcnQuCi8vIFRoZXJlIGlzIGFuIGluaGVyZW50IFRPQ1RPVSByYWNlOyBhY2NlcHRhYmxlIGZvciB0ZXN0cy4KZnVuYyBmcmVlQWRkcih0ICp0ZXN0aW5nLlQpIHN0cmluZyB7Cgl0LkhlbHBlcigpCglsbiwgZXJyIDo9IG5ldC5MaXN0ZW4oInRjcCIsICIxMjcuMC4wLjE6MCIpCglpZiBlcnIgIT0gbmlsIHsKCQl0LkZhdGFsKGVycikKCX0KCWRlZmVyIGxuLkNsb3NlKCkKCXJldHVybiBsbi5BZGRyKCkuU3RyaW5nKCkKfQoKZnVuYyB3YWl0VXAodCAqdGVzdGluZy5ULCBhZGRyIHN0cmluZykgewoJdC5IZWxwZXIoKQoJZGVhZGxpbmUgOj0gdGltZS5Ob3coKS5BZGQoMyAqIHRpbWUuU2Vjb25kKQoJZm9yIHRpbWUuTm93KCkuQmVmb3JlKGRlYWRsaW5lKSB7CgkJY29ubiwgZXJyIDo9IG5ldC5EaWFsVGltZW91dCgidGNwIiwgYWRkciwgMTAwKnRpbWUuTWlsbGlzZWNvbmQpCgkJaWYgZXJyID09IG5pbCB7CgkJCWNvbm4uQ2xvc2UoKQoJCQlyZXR1cm4KCQl9CgkJdGltZS5TbGVlcCgyMCAqIHRpbWUuTWlsbGlzZWNvbmQpCgl9Cgl0LkZhdGFsKCJzZXJ2ZXIgZGlkIG5vdCBzdGFydCBpbiB0aW1lIikKfQoKZnVuYyBUZXN0RGVmYXVsdHModCAqdGVzdGluZy5UKSB7CglzIDo9IE5ldyhodHRwLk5vdEZvdW5kSGFuZGxlcigpKQoJaWYgcy5zcnYuQWRkciAhPSBEZWZhdWx0QWRkciB7CgkJdC5FcnJvcmYoIkFkZHIgPSAlcSwgd2FudCAlcSIsIHMuc3J2LkFkZHIsIERlZmF1bHRBZGRyKQoJfQoJY2FzZXMgOj0gW11zdHJ1Y3QgewoJCW5hbWUgc3RyaW5nCgkJZ290ICB0aW1lLkR1cmF0aW9uCgkJd2FudCB0aW1lLkR1cmF0aW9uCgl9ewoJCXsiUmVhZEhlYWRlclRpbWVvdXQiLCBzLnNydi5SZWFkSGVhZGVyVGltZW91dCwgRGVmYXVsdFJlYWRIZWFkZXJUaW1lb3V0fSwKCQl7IlJlYWRUaW1lb3V0Iiwgcy5zcnYuUmVhZFRpbWVvdXQsIERlZmF1bHRSZWFkVGltZW91dH0sCgkJeyJXcml0ZVRpbWVvdXQiLCBzLnNydi5Xcml0ZVRpbWVvdXQsIERlZmF1bHRXcml0ZVRpbWVvdXR9LAoJCXsiSWRsZVRpbWVvdXQiLCBzLnNydi5JZGxlVGltZW91dCwgRGVmYXVsdElkbGVUaW1lb3V0fSwKCQl7InNodXRkb3duVGltZW91dCIsIHMuc2h1dGRvd25UaW1lb3V0LCBEZWZhdWx0U2h1dGRvd25UaW1lb3V0fSwKCX0KCWZvciBfLCBjIDo9IHJhbmdlIGNhc2VzIHsKCQlpZiBjLmdvdCAhPSBjLndhbnQgewoJCQl0LkVycm9yZigiJXMgPSAldiwgd2FudCAldiIsIGMubmFtZSwgYy5nb3QsIGMud2FudCkKCQl9Cgl9Cn0KCmZ1bmMgVGVzdE9wdGlvbnModCAqdGVzdGluZy5UKSB7CglzIDo9IE5ldyhodHRwLk5vdEZvdW5kSGFuZGxlcigpLAoJCVdpdGhBZGRyKCIxMjcuMC4wLjE6OTk5OSIpLAoJCVdpdGhSZWFkSGVhZGVyVGltZW91dCh0aW1lLlNlY29uZCksCgkJV2l0aFJlYWRUaW1lb3V0KDIqdGltZS5TZWNvbmQpLAoJCVdpdGhXcml0ZVRpbWVvdXQoMyp0aW1lLlNlY29uZCksCgkJV2l0aElkbGVUaW1lb3V0KDQqdGltZS5TZWNvbmQpLAoJCVdpdGhTaHV0ZG93blRpbWVvdXQoNSp0aW1lLlNlY29uZCksCgkpCglpZiBzLnNydi5BZGRyICE9ICIxMjcuMC4wLjE6OTk5OSIgewoJCXQuRXJyb3JmKCJBZGRyID0gJXEiLCBzLnNydi5BZGRyKQoJfQoJaWYgcy5zcnYuUmVhZEhlYWRlclRpbWVvdXQgIT0gdGltZS5TZWNvbmQgfHwKCQlzLnNydi5SZWFkVGltZW91dCAhPSAyKnRpbWUuU2Vjb25kIHx8CgkJcy5zcnYuV3JpdGVUaW1lb3V0ICE9IDMqdGltZS5TZWNvbmQgfHwKCQlzLnNydi5JZGxlVGltZW91dCAhPSA0KnRpbWUuU2Vjb25kIHx8CgkJcy5zaHV0ZG93blRpbWVvdXQgIT0gNSp0aW1lLlNlY29uZCB7CgkJdC5FcnJvcigib3B0aW9ucyB3ZXJlIG5vdCBhcHBsaWVkIikKCX0KfQoKZnVuYyBUZXN0UnVuX1NlcnZlc1JlcXVlc3RzKHQgKnRlc3RpbmcuVCkgewoJYWRkciA6PSBmcmVlQWRkcih0KQoJcyA6PSBOZXcoaHR0cC5IYW5kbGVyRnVuYyhmdW5jKHcgaHR0cC5SZXNwb25zZVdyaXRlciwgciAqaHR0cC5SZXF1ZXN0KSB7CgkJdy5Xcml0ZShbXWJ5dGUoIm9rIikpCgl9KSwgV2l0aEFkZHIoYWRkcikpCgoJY3R4LCBjYW5jZWwgOj0gY29udGV4dC5XaXRoQ2FuY2VsKGNvbnRleHQuQmFja2dyb3VuZCgpKQoJZGVmZXIgY2FuY2VsKCkKCXJ1bkVyciA6PSBtYWtlKGNoYW4gZXJyb3IsIDEpCglnbyBmdW5jKCkgeyBydW5FcnIgPC0gcy5SdW4oY3R4KSB9KCkKCgl3YWl0VXAodCwgYWRkcikKCglyZXNwLCBlcnIgOj0gaHR0cC5HZXQoImh0dHA6Ly8iICsgYWRkcikKCWlmIGVyciAhPSBuaWwgewoJCXQuRmF0YWwoZXJyKQoJfQoJYm9keSwgXyA6PSBpby5SZWFkQWxsKHJlc3AuQm9keSkKCXJlc3AuQm9keS5DbG9zZSgpCglpZiBzdHJpbmcoYm9keSkgIT0gIm9rIiB7CgkJdC5FcnJvcmYoImJvZHkgPSAlcSwgd2FudCAlcSIsIGJvZHksICJvayIpCgl9CgoJY2FuY2VsKCkKCXNlbGVjdCB7CgljYXNlIGVyciA6PSA8LXJ1bkVycjoKCQlpZiBlcnIgIT0gbmlsIHsKCQkJdC5FcnJvcmYoIlJ1biByZXR1cm5lZCAldiwgd2FudCBuaWwiLCBlcnIpCgkJfQoJY2FzZSA8LXRpbWUuQWZ0ZXIoNSAqIHRpbWUuU2Vjb25kKToKCQl0LkZhdGFsKCJSdW4gZGlkIG5vdCByZXR1cm4gYWZ0ZXIgY2FuY2VsIikKCX0KfQoKZnVuYyBUZXN0UnVuX0RyYWluc0luZmxpZ2h0UmVxdWVzdHModCAqdGVzdGluZy5UKSB7CglhZGRyIDo9IGZyZWVBZGRyKHQpCglzIDo9IE5ldyhodHRwLkhhbmRsZXJGdW5jKGZ1bmModyBodHRwLlJlc3BvbnNlV3JpdGVyLCByICpodHRwLlJlcXVlc3QpIHsKCQl0aW1lLlNsZWVwKDMwMCAqIHRpbWUuTWlsbGlzZWNvbmQpIC8vIHNpbXVsYXRlIHJlYWwgd29yawoJCXcuV3JpdGUoW11ieXRlKCJkb25lIikpCgl9KSwgV2l0aEFkZHIoYWRkciksIFdpdGhTaHV0ZG93blRpbWVvdXQoNSp0aW1lLlNlY29uZCkpCgoJY3R4LCBjYW5jZWwgOj0gY29udGV4dC5XaXRoQ2FuY2VsKGNvbnRleHQuQmFja2dyb3VuZCgpKQoJZGVmZXIgY2FuY2VsKCkKCXJ1bkVyciA6PSBtYWtlKGNoYW4gZXJyb3IsIDEpCglnbyBmdW5jKCkgeyBydW5FcnIgPC0gcy5SdW4oY3R4KSB9KCkKCgl3YWl0VXAodCwgYWRkcikKCgkvLyBGaXJlIGEgcmVxdWVzdCwgdGhlbiBjYW5jZWwgd2hpbGUgaXQgaXMgaW4gZmxpZ2h0LgoJcmVzcENoIDo9IG1ha2UoY2hhbiBzdHJpbmcsIDEpCglnbyBmdW5jKCkgewoJCXJlc3AsIGVyciA6PSBodHRwLkdldCgiaHR0cDovLyIgKyBhZGRyKQoJCWlmIGVyciAhPSBuaWwgewoJCQlyZXNwQ2ggPC0gImVycm9yOiAiICsgZXJyLkVycm9yKCkKCQkJcmV0dXJuCgkJfQoJCWRlZmVyIHJlc3AuQm9keS5DbG9zZSgpCgkJYm9keSwgXyA6PSBpby5SZWFkQWxsKHJlc3AuQm9keSkKCQlyZXNwQ2ggPC0gc3RyaW5nKGJvZHkpCgl9KCkKCXRpbWUuU2xlZXAoMTAwICogdGltZS5NaWxsaXNlY29uZCkgLy8gZW5zdXJlIHRoZSBoYW5kbGVyIGlzIHNsZWVwaW5nCgljYW5jZWwoKQoKCXNlbGVjdCB7CgljYXNlIGJvZHkgOj0gPC1yZXNwQ2g6CgkJaWYgYm9keSAhPSAiZG9uZSIgewoJCQl0LkVycm9yZigiaW4tZmxpZ2h0IHJlcXVlc3QgZ290ICVxLCB3YW50ICVxICh3YXMga2lsbGVkIG1pZC1mbGlnaHQpIiwgYm9keSwgImRvbmUiKQoJCX0KCWNhc2UgPC10aW1lLkFmdGVyKDUgKiB0aW1lLlNlY29uZCk6CgkJdC5GYXRhbCgiaW4tZmxpZ2h0IHJlcXVlc3QgbmV2ZXIgY29tcGxldGVkIikKCX0KCglzZWxlY3QgewoJY2FzZSBlcnIgOj0gPC1ydW5FcnI6CgkJaWYgZXJyICE9IG5pbCB7CgkJCXQuRXJyb3JmKCJSdW4gcmV0dXJuZWQgJXYsIHdhbnQgbmlsIiwgZXJyKQoJCX0KCWNhc2UgPC10aW1lLkFmdGVyKDUgKiB0aW1lLlNlY29uZCk6CgkJdC5GYXRhbCgiUnVuIGRpZCBub3QgcmV0dXJuIGFmdGVyIGRyYWluIikKCX0KfQoKZnVuYyBUZXN0UnVuX0hvb2tzUnVuSW5PcmRlcih0ICp0ZXN0aW5nLlQpIHsKCWFkZHIgOj0gZnJlZUFkZHIodCkKCXZhciBvcmRlciBbXWludAoJdmFyIGhvb2tDdHhIYXNEZWFkbGluZSBhdG9taWMuQm9vbAoJcyA6PSBOZXcoaHR0cC5Ob3RGb3VuZEhhbmRsZXIoKSwgV2l0aEFkZHIoYWRkciksIFdpdGhPblNodXRkb3duKAoJCWZ1bmMoY3R4IGNvbnRleHQuQ29udGV4dCkgZXJyb3IgewoJCQlfLCBoYXNEZWFkbGluZSA6PSBjdHguRGVhZGxpbmUoKQoJCQlob29rQ3R4SGFzRGVhZGxpbmUuU3RvcmUoaGFzRGVhZGxpbmUpCgkJCW9yZGVyID0gYXBwZW5kKG9yZGVyLCAxKQoJCQlyZXR1cm4gbmlsCgkJfSwKCQlmdW5jKGN0eCBjb250ZXh0LkNvbnRleHQpIGVycm9yIHsKCQkJb3JkZXIgPSBhcHBlbmQob3JkZXIsIDIpCgkJCXJldHVybiBuaWwKCQl9LAoJKSkKCgljdHgsIGNhbmNlbCA6PSBjb250ZXh0LldpdGhDYW5jZWwoY29udGV4dC5CYWNrZ3JvdW5kKCkpCglkZWZlciBjYW5jZWwoKQoJcnVuRXJyIDo9IG1ha2UoY2hhbiBlcnJvciwgMSkKCWdvIGZ1bmMoKSB7IHJ1bkVyciA8LSBzLlJ1bihjdHgpIH0oKQoJd2FpdFVwKHQsIGFkZHIpCgljYW5jZWwoKQoKCWlmIGVyciA6PSA8LXJ1bkVycjsgZXJyICE9IG5pbCB7CgkJdC5GYXRhbGYoIlJ1biByZXR1cm5lZCAldiIsIGVycikKCX0KCWlmIGxlbihvcmRlcikgIT0gMiB8fCBvcmRlclswXSAhPSAxIHx8IG9yZGVyWzFdICE9IDIgewoJCXQuRXJyb3JmKCJob29rcyByYW4gaW4gb3JkZXIgJXYsIHdhbnQgWzEgMl0iLCBvcmRlcikKCX0KCWlmICFob29rQ3R4SGFzRGVhZGxpbmUuTG9hZCgpIHsKCQl0LkVycm9yKCJob29rIGNvbnRleHQgaGFkIG5vIGRlYWRsaW5lIikKCX0KfQoKZnVuYyBUZXN0UnVuX0hvb2tFcnJvckRvZXNOb3RGYWlsU2h1dGRvd24odCAqdGVzdGluZy5UKSB7CglhZGRyIDo9IGZyZWVBZGRyKHQpCgl2YXIgc2Vjb25kUmFuIGF0b21pYy5Cb29sCglzIDo9IE5ldyhodHRwLk5vdEZvdW5kSGFuZGxlcigpLCBXaXRoQWRkcihhZGRyKSwgV2l0aE9uU2h1dGRvd24oCgkJZnVuYyhjdHggY29udGV4dC5Db250ZXh0KSBlcnJvciB7IHJldHVybiBlcnJvcnMuTmV3KCJ0ZXN0IGhvb2sgZXJyb3IiKSB9LAoJCWZ1bmMoY3R4IGNvbnRleHQuQ29udGV4dCkgZXJyb3IgeyBzZWNvbmRSYW4uU3RvcmUodHJ1ZSk7IHJldHVybiBuaWwgfSwKCSkpCgoJY3R4LCBjYW5jZWwgOj0gY29udGV4dC5XaXRoQ2FuY2VsKGNvbnRleHQuQmFja2dyb3VuZCgpKQoJZGVmZXIgY2FuY2VsKCkKCXJ1bkVyciA6PSBtYWtlKGNoYW4gZXJyb3IsIDEpCglnbyBmdW5jKCkgeyBydW5FcnIgPC0gcy5SdW4oY3R4KSB9KCkKCXdhaXRVcCh0LCBhZGRyKQoJY2FuY2VsKCkKCglpZiBlcnIgOj0gPC1ydW5FcnI7IGVyciAhPSBuaWwgewoJCXQuRXJyb3JmKCJSdW4gcmV0dXJuZWQgJXYsIHdhbnQgbmlsIGRlc3BpdGUgaG9vayBlcnJvciIsIGVycikKCX0KCWlmICFzZWNvbmRSYW4uTG9hZCgpIHsKCQl0LkVycm9yKCJzZWNvbmQgaG9vayBkaWQgbm90IHJ1biBhZnRlciBmaXJzdCBob29rIGZhaWxlZCIpCgl9Cn0KCmZ1bmMgVGVzdFJ1bl9UTFNDb25maWdFcnJvcih0ICp0ZXN0aW5nLlQpIHsKCXMgOj0gTmV3KGh0dHAuTm90Rm91bmRIYW5kbGVyKCksIFdpdGhUTFMoImNlcnQucGVtIiwgIiIpKQoJaWYgZXJyIDo9IHMuUnVuKGNvbnRleHQuQmFja2dyb3VuZCgpKTsgZXJyID09IG5pbCB7CgkJdC5FcnJvcigiZXhwZWN0ZWQgZXJyb3IgZm9yIGNlcnQtd2l0aG91dC1rZXksIGdvdCBuaWwiKQoJfQp9Cg==
+package graceful
+
+import (
+	"context"
+	"errors"
+	"io"
+	"net"
+	"net/http"
+	"sync/atomic"
+	"testing"
+	"time"
+)
+
+// freeAddr returns a localhost address with a currently-free port.
+// There is an inherent TOCTOU race; acceptable for tests.
+func freeAddr(t *testing.T) string {
+	t.Helper()
+	ln, err := net.Listen("tcp", "127.0.0.1:0")
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer ln.Close()
+	return ln.Addr().String()
+}
+
+func waitUp(t *testing.T, addr string) {
+	t.Helper()
+	deadline := time.Now().Add(3 * time.Second)
+	for time.Now().Before(deadline) {
+		conn, err := net.DialTimeout("tcp", addr, 100*time.Millisecond)
+		if err == nil {
+			conn.Close()
+			return
+		}
+		time.Sleep(20 * time.Millisecond)
+	}
+	t.Fatal("server did not start in time")
+}
+
+func TestDefaults(t *testing.T) {
+	s := New(http.NotFoundHandler())
+	if s.srv.Addr != DefaultAddr {
+		t.Errorf("Addr = %q, want %q", s.srv.Addr, DefaultAddr)
+	}
+	cases := []struct {
+		name string
+		got  time.Duration
+		want time.Duration
+	}{
+		{"ReadHeaderTimeout", s.srv.ReadHeaderTimeout, DefaultReadHeaderTimeout},
+		{"ReadTimeout", s.srv.ReadTimeout, DefaultReadTimeout},
+		{"WriteTimeout", s.srv.WriteTimeout, DefaultWriteTimeout},
+		{"IdleTimeout", s.srv.IdleTimeout, DefaultIdleTimeout},
+		{"shutdownTimeout", s.shutdownTimeout, DefaultShutdownTimeout},
+	}
+	for _, c := range cases {
+		if c.got != c.want {
+			t.Errorf("%s = %v, want %v", c.name, c.got, c.want)
+		}
+	}
+}
+
+func TestOptions(t *testing.T) {
+	s := New(http.NotFoundHandler(),
+		WithAddr("127.0.0.1:9999"),
+		WithReadHeaderTimeout(time.Second),
+		WithReadTimeout(2*time.Second),
+		WithWriteTimeout(3*time.Second),
+		WithIdleTimeout(4*time.Second),
+		WithShutdownTimeout(5*time.Second),
+	)
+	if s.srv.Addr != "127.0.0.1:9999" {
+		t.Errorf("Addr = %q", s.srv.Addr)
+	}
+	if s.srv.ReadHeaderTimeout != time.Second ||
+		s.srv.ReadTimeout != 2*time.Second ||
+		s.srv.WriteTimeout != 3*time.Second ||
+		s.srv.IdleTimeout != 4*time.Second ||
+		s.shutdownTimeout != 5*time.Second {
+		t.Error("options were not applied")
+	}
+}
+
+func TestRun_ServesRequests(t *testing.T) {
+	addr := freeAddr(t)
+	s := New(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("ok"))
+	}), WithAddr(addr))
+
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	runErr := make(chan error, 1)
+	go func() { runErr <- s.Run(ctx) }()
+
+	waitUp(t, addr)
+
+	resp, err := http.Get("http://" + addr)
+	if err != nil {
+		t.Fatal(err)
+	}
+	body, _ := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if string(body) != "ok" {
+		t.Errorf("body = %q, want %q", body, "ok")
+	}
+
+	cancel()
+	select {
+	case err := <-runErr:
+		if err != nil {
+			t.Errorf("Run returned %v, want nil", err)
+		}
+	case <-time.After(5 * time.Second):
+		t.Fatal("Run did not return after cancel")
+	}
+}
+
+func TestRun_DrainsInflightRequests(t *testing.T) {
+	addr := freeAddr(t)
+	s := New(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		time.Sleep(300 * time.Millisecond) // simulate real work
+		w.Write([]byte("done"))
+	}), WithAddr(addr), WithShutdownTimeout(5*time.Second))
+
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	runErr := make(chan error, 1)
+	go func() { runErr <- s.Run(ctx) }()
+
+	waitUp(t, addr)
+
+	// Fire a request, then cancel while it is in flight.
+	respCh := make(chan string, 1)
+	go func() {
+		resp, err := http.Get("http://" + addr)
+		if err != nil {
+			respCh <- "error: " + err.Error()
+			return
+		}
+		defer resp.Body.Close()
+		body, _ := io.ReadAll(resp.Body)
+		respCh <- string(body)
+	}()
+	time.Sleep(100 * time.Millisecond) // ensure the handler is sleeping
+	cancel()
+
+	select {
+	case body := <-respCh:
+		if body != "done" {
+			t.Errorf("in-flight request got %q, want %q (was killed mid-flight)", body, "done")
+		}
+	case <-time.After(5 * time.Second):
+		t.Fatal("in-flight request never completed")
+	}
+
+	select {
+	case err := <-runErr:
+		if err != nil {
+			t.Errorf("Run returned %v, want nil", err)
+		}
+	case <-time.After(5 * time.Second):
+		t.Fatal("Run did not return after drain")
+	}
+}
+
+func TestRun_HooksRunInOrder(t *testing.T) {
+	addr := freeAddr(t)
+	var order []int
+	var hookCtxHasDeadline atomic.Bool
+	s := New(http.NotFoundHandler(), WithAddr(addr), WithOnShutdown(
+		func(ctx context.Context) error {
+			_, hasDeadline := ctx.Deadline()
+			hookCtxHasDeadline.Store(hasDeadline)
+			order = append(order, 1)
+			return nil
+		},
+		func(ctx context.Context) error {
+			order = append(order, 2)
+			return nil
+		},
+	))
+
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	runErr := make(chan error, 1)
+	go func() { runErr <- s.Run(ctx) }()
+	waitUp(t, addr)
+	cancel()
+
+	if err := <-runErr; err != nil {
+		t.Fatalf("Run returned %v", err)
+	}
+	if len(order) != 2 || order[0] != 1 || order[1] != 2 {
+		t.Errorf("hooks ran in order %v, want [1 2]", order)
+	}
+	if !hookCtxHasDeadline.Load() {
+		t.Error("hook context had no deadline")
+	}
+}
+
+func TestRun_HookErrorDoesNotFailShutdown(t *testing.T) {
+	addr := freeAddr(t)
+	var secondRan atomic.Bool
+	s := New(http.NotFoundHandler(), WithAddr(addr), WithOnShutdown(
+		func(ctx context.Context) error { return errors.New("test hook error") },
+		func(ctx context.Context) error { secondRan.Store(true); return nil },
+	))
+
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	runErr := make(chan error, 1)
+	go func() { runErr <- s.Run(ctx) }()
+	waitUp(t, addr)
+	cancel()
+
+	if err := <-runErr; err != nil {
+		t.Errorf("Run returned %v, want nil despite hook error", err)
+	}
+	if !secondRan.Load() {
+		t.Error("second hook did not run after first hook failed")
+	}
+}
+
+func TestRun_TLSConfigError(t *testing.T) {
+	s := New(http.NotFoundHandler(), WithTLS("cert.pem", ""))
+	if err := s.Run(context.Background()); err == nil {
+		t.Error("expected error for cert-without-key, got nil")
+	}
+}

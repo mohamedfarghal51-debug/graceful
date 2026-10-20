@@ -1,1 +1,238 @@
-Ly8gUGFja2FnZSBncmFjZWZ1bCBydW5zIGFuIFtodHRwLlNlcnZlcl0gd2l0aCBzYW5lIHByb2R1Y3Rpb24gdGltZW91dHMgYW5kCi8vIGdyYWNlZnVsIHNodXRkb3duLgovLwovLyBJdCB3aXJlcyBzaWduYWwgaGFuZGxpbmcgKFNJR0lOVC9TSUdURVJNKSwgYXBwbGllcyB0aW1lb3V0IGRlZmF1bHRzIHRoYXQKLy8gcHJvdGVjdCBhZ2FpbnN0IHNsb3cgY2xpZW50cywgYW5kIGRyYWlucyBpbi1mbGlnaHQgcmVxdWVzdHMgYmVmb3JlIGV4aXRpbmcuCi8vIFNodXRkb3duIGhvb2tzIGxldCB5b3UgY2xvc2UgZGF0YWJhc2UgcG9vbHMsIGZsdXNoIHRlbGVtZXRyeSwgYW5kIHJlbGVhc2UKLy8gb3RoZXIgcmVzb3VyY2VzIHdpdGhpbiB0aGUgc2h1dGRvd24gZGVhZGxpbmUuCi8vCi8vIEEgbWluaW1hbCBwcm9ncmFtOgovLwovLwltdXggOj0gaHR0cC5OZXdTZXJ2ZU11eCgpCi8vCW11eC5IYW5kbGVGdW5jKCIvaGVhbHRoeiIsIGZ1bmModyBodHRwLlJlc3BvbnNlV3JpdGVyLCByICpodHRwLlJlcXVlc3QpIHsKLy8JCXcuV3JpdGVIZWFkZXIoaHR0cC5TdGF0dXNPSykKLy8JfSkKLy8KLy8Jc3J2IDo9IGdyYWNlZnVsLk5ldyhtdXgsCi8vCQlncmFjZWZ1bC5XaXRoQWRkcigiOjgwODAiKSwKLy8JCWdyYWNlZnVsLldpdGhPblNodXRkb3duKGZ1bmMoY3R4IGNvbnRleHQuQ29udGV4dCkgZXJyb3IgewovLwkJCXJldHVybiBkYi5DbG9zZSgpCi8vCQl9KSwKLy8JKQovLwlpZiBlcnIgOj0gc3J2LlJ1bihjb250ZXh0LkJhY2tncm91bmQoKSk7IGVyciAhPSBuaWwgewovLwkJbG9nLkZhdGFsKGVycikKLy8JfQpwYWNrYWdlIGdyYWNlZnVsCgppbXBvcnQgKAoJImNvbnRleHQiCgkiZXJyb3JzIgoJImZtdCIKCSJsb2cvc2xvZyIKCSJuZXQvaHR0cCIKCSJvcyIKCSJvcy9zaWduYWwiCgkic3lzY2FsbCIKCSJ0aW1lIgopCgovLyBQcm9kdWN0aW9uIHRpbWVvdXQgZGVmYXVsdHMuIEV2ZXJ5IG9uZSBvZiB0aGVtIGV4aXN0cyBiZWNhdXNlIHNvbWV0aGluZwovLyBicm9rZSBpbiBwcm9kdWN0aW9uIHdpdGhvdXQgaXQ6Ci8vCi8vICAgLSBSZWFkSGVhZGVyVGltZW91dDogdGhlIHNsb3dsb3JpcyBndWFyZC4gSGVhZGVycyBtdXN0IGFycml2ZSBmYXN0OwovLyAgICAgdGhlIGJvZHkgY2FuIHRha2UgbG9uZ2VyLgovLyAgIC0gUmVhZFRpbWVvdXQ6IGJvdW5kcyB0aGUgZW50aXJlIHJlcXVlc3QgcmVhZCwgYm9keSBpbmNsdWRlZC4KLy8gICAtIFdyaXRlVGltZW91dDogYm91bmRzIHRoZSBlbnRpcmUgcmVzcG9uc2Ugd3JpdGUsIGhhbmRsZXIgdGltZSBpbmNsdWRlZC4KLy8gICAgIEtlZXAgaXQgYWJvdmUgeW91ciBzbG93ZXN0IGxlZ2l0aW1hdGUgaGFuZGxlci4KLy8gICAtIElkbGVUaW1lb3V0OiBob3cgbG9uZyBhIGtlZXAtYWxpdmUgY29ubmVjdGlvbiBtYXkgc2l0IGlkbGUuCi8vICAgLSBTaHV0ZG93blRpbWVvdXQ6IGhvdyBsb25nIGluLWZsaWdodCByZXF1ZXN0cyBhbmQgaG9va3MgZ2V0IGR1cmluZwovLyAgICAgc2h1dGRvd24gYmVmb3JlIHRoZSBwcm9jZXNzIGdpdmVzIHVwIGFuZCBleGl0cy4KY29uc3QgKAoJRGVmYXVsdEFkZHIgICAgICAgICAgICAgID0gIjo4MDgwIgoJRGVmYXVsdFJlYWRIZWFkZXJUaW1lb3V0ID0gNSAqIHRpbWUuU2Vjb25kCglEZWZhdWx0UmVhZFRpbWVvdXQgICAgICAgPSAxMCAqIHRpbWUuU2Vjb25kCglEZWZhdWx0V3JpdGVUaW1lb3V0ICAgICAgPSAzMCAqIHRpbWUuU2Vjb25kCglEZWZhdWx0SWRsZVRpbWVvdXQgICAgICAgPSAxMjAgKiB0aW1lLlNlY29uZAoJRGVmYXVsdFNodXRkb3duVGltZW91dCAgID0gMjAgKiB0aW1lLlNlY29uZAopCgovLyBIb29rIHJ1bnMgZHVyaW5nIGdyYWNlZnVsIHNodXRkb3duIHdpdGggdGhlIHNodXRkb3duIGNvbnRleHQsIHdoaWNoIGlzCi8vIGNhbmNlbGxlZCB3aGVuIFNodXRkb3duVGltZW91dCBlbGFwc2VzLiBVc2UgaG9va3MgdG8gY2xvc2UgZGF0YWJhc2UgcG9vbHMsCi8vIGZsdXNoIHRlbGVtZXRyeSwgb3IgcmVsZWFzZSBhbnkgb3RoZXIgcmVzb3VyY2UuIEEgaG9vayB0aGF0IHJldHVybnMgYW4KLy8gZXJyb3IgaXMgbG9nZ2VkOyBpdCBuZXZlciBhYm9ydHMgdGhlIHNodXRkb3duIG9mIHRoZSByZW1haW5pbmcgaG9va3MuCnR5cGUgSG9vayBmdW5jKGN0eCBjb250ZXh0LkNvbnRleHQpIGVycm9yCgovLyBTZXJ2ZXIgaXMgYW4gaHR0cC5TZXJ2ZXIgd2l0aCBwcm9kdWN0aW9uIHRpbWVvdXRzLCBzaWduYWwgaGFuZGxpbmcsIGFuZAovLyBncmFjZWZ1bCBzaHV0ZG93bi4gVGhlIHplcm8gdmFsdWUgaXMgbm90IHVzYWJsZTsgY29uc3RydWN0IG9uZSB3aXRoIE5ldy4KdHlwZSBTZXJ2ZXIgc3RydWN0IHsKCXNydiAgICAgICAgICAgICAqaHR0cC5TZXJ2ZXIKCXNodXRkb3duVGltZW91dCB0aW1lLkR1cmF0aW9uCglsb2dnZXIgICAgICAgICAgKnNsb2cuTG9nZ2VyCglob29rcyAgICAgICAgICAgW11Ib29rCgljZXJ0RmlsZSAgICAgICAgc3RyaW5nCglrZXlGaWxlICAgICAgICAgc3RyaW5nCn0KCi8vIE9wdGlvbiBjb25maWd1cmVzIGEgU2VydmVyLgp0eXBlIE9wdGlvbiBmdW5jKCpTZXJ2ZXIpCgovLyBXaXRoQWRkciBzZXRzIHRoZSBsaXN0ZW4gYWRkcmVzcy4gRGVmYXVsdCBEZWZhdWx0QWRkciAoIjo4MDgwIikuCmZ1bmMgV2l0aEFkZHIoYWRkciBzdHJpbmcpIE9wdGlvbiB7CglyZXR1cm4gZnVuYyhzICpTZXJ2ZXIpIHsgcy5zcnYuQWRkciA9IGFkZHIgfQp9CgovLyBXaXRoUmVhZEhlYWRlclRpbWVvdXQgc2V0cyB0aGUgbWF4aW11bSB0aW1lIHRvIHJlYWQgcmVxdWVzdCBoZWFkZXJzLgovLyBEZWZhdWx0IERlZmF1bHRSZWFkSGVhZGVyVGltZW91dC4gVGhpcyBpcyB5b3VyIHNsb3dsb3JpcyBwcm90ZWN0aW9uOwovLyBrZWVwIGl0IHNtYWxsLgpmdW5jIFdpdGhSZWFkSGVhZGVyVGltZW91dChkIHRpbWUuRHVyYXRpb24pIE9wdGlvbiB7CglyZXR1cm4gZnVuYyhzICpTZXJ2ZXIpIHsgcy5zcnYuUmVhZEhlYWRlclRpbWVvdXQgPSBkIH0KfQoKLy8gV2l0aFJlYWRUaW1lb3V0IHNldHMgdGhlIG1heGltdW0gdGltZSB0byByZWFkIHRoZSBmdWxsIHJlcXVlc3QsIGJvZHkKLy8gaW5jbHVkZWQuIERlZmF1bHQgRGVmYXVsdFJlYWRUaW1lb3V0LgpmdW5jIFdpdGhSZWFkVGltZW91dChkIHRpbWUuRHVyYXRpb24pIE9wdGlvbiB7CglyZXR1cm4gZnVuYyhzICpTZXJ2ZXIpIHsgcy5zcnYuUmVhZFRpbWVvdXQgPSBkIH0KfQoKLy8gV2l0aFdyaXRlVGltZW91dCBzZXRzIHRoZSBtYXhpbXVtIHRpbWUgdG8gd3JpdGUgdGhlIGZ1bGwgcmVzcG9uc2UsCi8vIGhhbmRsZXIgZXhlY3V0aW9uIGluY2x1ZGVkLiBEZWZhdWx0IERlZmF1bHRXcml0ZVRpbWVvdXQuIFJhaXNlIGl0IGlmIHlvdQovLyBzZXJ2ZSBsZWdpdGltYXRlbHkgc2xvdyBlbmRwb2ludHMgKGV4cG9ydHMsIFNTRSk7IGxvd2VyIGl0IG90aGVyd2lzZS4KZnVuYyBXaXRoV3JpdGVUaW1lb3V0KGQgdGltZS5EdXJhdGlvbikgT3B0aW9uIHsKCXJldHVybiBmdW5jKHMgKlNlcnZlcikgeyBzLnNydi5Xcml0ZVRpbWVvdXQgPSBkIH0KfQoKLy8gV2l0aElkbGVUaW1lb3V0IHNldHMgdGhlIG1heGltdW0gdGltZSBhIGtlZXAtYWxpdmUgY29ubmVjdGlvbiBtYXkgc3RheQovLyBpZGxlLiBEZWZhdWx0IERlZmF1bHRJZGxlVGltZW91dC4KZnVuYyBXaXRoSWRsZVRpbWVvdXQoZCB0aW1lLkR1cmF0aW9uKSBPcHRpb24gewoJcmV0dXJuIGZ1bmMocyAqU2VydmVyKSB7IHMuc3J2LklkbGVUaW1lb3V0ID0gZCB9Cn0KCi8vIFdpdGhTaHV0ZG93blRpbWVvdXQgc2V0cyBob3cgbG9uZyBncmFjZWZ1bCBzaHV0ZG93biBtYXkgdGFrZSBiZWZvcmUgdGhlCi8vIHNodXRkb3duIGNvbnRleHQgaXMgY2FuY2VsbGVkLiBEZWZhdWx0IERlZmF1bHRTaHV0ZG93blRpbWVvdXQuIEl0IG11c3QKLy8gY292ZXIgeW91ciBzbG93ZXN0IGluLWZsaWdodCByZXF1ZXN0IHBsdXMgZXZlcnkgc2h1dGRvd24gaG9vay4KZnVuYyBXaXRoU2h1dGRvd25UaW1lb3V0KGQgdGltZS5EdXJhdGlvbikgT3B0aW9uIHsKCXJldHVybiBmdW5jKHMgKlNlcnZlcikgeyBzLnNodXRkb3duVGltZW91dCA9IGQgfQp9CgovLyBXaXRoTG9nZ2VyIHNldHMgdGhlIGxvZ2dlciB1c2VkIGZvciBsaWZlY3ljbGUgZXZlbnRzLiBEZWZhdWx0IGlzIGEgdGV4dAovLyBzbG9nIGxvZ2dlciB3cml0aW5nIHRvIHN0ZGVyci4gQSBuaWwgbG9nZ2VyIGtlZXBzIHRoZSBkZWZhdWx0LgpmdW5jIFdpdGhMb2dnZXIobCAqc2xvZy5Mb2dnZXIpIE9wdGlvbiB7CglyZXR1cm4gZnVuYyhzICpTZXJ2ZXIpIHsKCQlpZiBsICE9IG5pbCB7CgkJCXMubG9nZ2VyID0gbAoJCX0KCX0KfQoKLy8gV2l0aE9uU2h1dGRvd24gYXBwZW5kcyBob29rcyBydW4sIGluIG9yZGVyLCBkdXJpbmcgZ3JhY2VmdWwgc2h1dGRvd24gYWZ0ZXIKLy8gdGhlIEhUVFAgbGlzdGVuZXIgaGFzIHN0b3BwZWQgYWNjZXB0aW5nIG5ldyBjb25uZWN0aW9ucy4gRWFjaCBob29rIGdldHMKLy8gdGhlIHNodXRkb3duIGNvbnRleHQ7IGhvb2sgZXJyb3JzIGFyZSBsb2dnZWQgYW5kIG5ldmVyIGFib3J0IHNodXRkb3duLgpmdW5jIFdpdGhPblNodXRkb3duKGhvb2tzIC4uLkhvb2spIE9wdGlvbiB7CglyZXR1cm4gZnVuYyhzICpTZXJ2ZXIpIHsgcy5ob29rcyA9IGFwcGVuZChzLmhvb2tzLCBob29rcy4uLikgfQp9CgovLyBXaXRoVExTIGVuYWJsZXMgSFRUUFMuIEJvdGggZmlsZXMgbXVzdCBiZSBzZXQgb3IgbmVpdGhlcjsgcGFzc2luZyBvbmx5Ci8vIG9uZSBpcyBhIGNvbmZpZ3VyYXRpb24gZXJyb3IgcmVwb3J0ZWQgYnkgUnVuLgpmdW5jIFdpdGhUTFMoY2VydEZpbGUsIGtleUZpbGUgc3RyaW5nKSBPcHRpb24gewoJcmV0dXJuIGZ1bmMocyAqU2VydmVyKSB7CgkJcy5jZXJ0RmlsZSA9IGNlcnRGaWxlCgkJcy5rZXlGaWxlID0ga2V5RmlsZQoJfQp9CgovLyBOZXcgYnVpbGRzIGEgU2VydmVyIGFyb3VuZCBoYW5kbGVyIHdpdGggcHJvZHVjdGlvbiB0aW1lb3V0IGRlZmF1bHRzLAovLyBvdmVycmlkZGVuIGJ5IG9wdHMuCmZ1bmMgTmV3KGhhbmRsZXIgaHR0cC5IYW5kbGVyLCBvcHRzIC4uLk9wdGlvbikgKlNlcnZlciB7CglzIDo9ICZTZXJ2ZXJ7CgkJc3J2OiAmaHR0cC5TZXJ2ZXJ7CgkJCUFkZHI6ICAgICAgICAgICAgICBEZWZhdWx0QWRkciwKCQkJSGFuZGxlcjogICAgICAgICAgIGhhbmRsZXIsCgkJCVJlYWRIZWFkZXJUaW1lb3V0OiBEZWZhdWx0UmVhZEhlYWRlclRpbWVvdXQsCgkJCVJlYWRUaW1lb3V0OiAgICAgICBEZWZhdWx0UmVhZFRpbWVvdXQsCgkJCVdyaXRlVGltZW91dDogICAgICBEZWZhdWx0V3JpdGVUaW1lb3V0LAoJCQlJZGxlVGltZW91dDogICAgICAgRGVmYXVsdElkbGVUaW1lb3V0LAoJCX0sCgkJc2h1dGRvd25UaW1lb3V0OiBEZWZhdWx0U2h1dGRvd25UaW1lb3V0LAoJCWxvZ2dlcjogICAgICAgICAgc2xvZy5OZXcoc2xvZy5OZXdUZXh0SGFuZGxlcihvcy5TdGRlcnIsIG5pbCkpLAoJfQoJZm9yIF8sIG9wdCA6PSByYW5nZSBvcHRzIHsKCQlvcHQocykKCX0KCXJldHVybiBzCn0KCi8vIEhUVFBTZXJ2ZXIgZXhwb3NlcyB0aGUgdW5kZXJseWluZyBbaHR0cC5TZXJ2ZXJdIGZvciBhZHZhbmNlZCB1c2UKLy8gKGN1c3RvbSBDb25uU3RhdGUgaG9va3MsIGh0dHAyIGNvbmZpZ3VyYXRpb24sIGV0Yy4pLgpmdW5jIChzICpTZXJ2ZXIpIEhUVFBTZXJ2ZXIoKSAqaHR0cC5TZXJ2ZXIgeyByZXR1cm4gcy5zcnYgfQoKLy8gUnVuIHN0YXJ0cyB0aGUgc2VydmVyIGFuZCBibG9ja3MgdW50aWwgY3R4IGlzIGNhbmNlbGxlZCBvciB0aGUgcHJvY2VzcwovLyByZWNlaXZlcyBTSUdJTlQvU0lHVEVSTSwgdGhlbiBncmFjZWZ1bGx5IHNodXRzIGRvd246IHRoZSBsaXN0ZW5lciBzdG9wcwovLyBhY2NlcHRpbmcgbmV3IGNvbm5lY3Rpb25zLCBpbi1mbGlnaHQgcmVxdWVzdHMgYXJlIGRyYWluZWQsIGFuZCBzaHV0ZG93bgovLyBob29rcyBydW4uIEl0IHJldHVybnMgbmlsIG9uIGNsZWFuIHNodXRkb3duLgovLwovLyBJZiB0aGUgc2VydmVyIGZhaWxzIHRvIHN0YXJ0IChiYWQgYWRkcmVzcywgVExTIG1pc2NvbmZpZ3VyYXRpb24pLCBSdW4KLy8gcmV0dXJucyB0aGF0IGVycm9yIGluc3RlYWQgb2YgYmxvY2tpbmcuCmZ1bmMgKHMgKlNlcnZlcikgUnVuKGN0eCBjb250ZXh0LkNvbnRleHQpIGVycm9yIHsKCWlmIChzLmNlcnRGaWxlID09ICIiKSAhPSAocy5rZXlGaWxlID09ICIiKSB7CgkJcmV0dXJuIGVycm9ycy5OZXcoImdyYWNlZnVsOiBXaXRoVExTIHJlcXVpcmVzIGJvdGggY2VydCBhbmQga2V5IGZpbGVzIikKCX0KCgljdHgsIHN0b3AgOj0gc2lnbmFsLk5vdGlmeUNvbnRleHQoY3R4LCBzeXNjYWxsLlNJR0lOVCwgc3lzY2FsbC5TSUdURVJNKQoJZGVmZXIgc3RvcCgpCgoJZXJyQ2ggOj0gbWFrZShjaGFuIGVycm9yLCAxKQoJZ28gZnVuYygpIHsgZXJyQ2ggPC0gcy5zZXJ2ZSgpIH0oKQoKCXNlbGVjdCB7CgljYXNlIDwtY3R4LkRvbmUoKToKCQlzLmxvZ2dlci5JbmZvKCJzaHV0ZG93biBpbml0aWF0ZWQiLCAicmVhc29uIiwgY3R4LkVycigpKQoJCXNodXRDdHgsIGNhbmNlbCA6PSBjb250ZXh0LldpdGhUaW1lb3V0KGNvbnRleHQuQmFja2dyb3VuZCgpLCBzLnNodXRkb3duVGltZW91dCkKCQlkZWZlciBjYW5jZWwoKQoJCXJldHVybiBlcnJvcnMuSm9pbihzLmdyYWNlZnVsKHNodXRDdHgpLCA8LWVyckNoKQoJY2FzZSBlcnIgOj0gPC1lcnJDaDoKCQlyZXR1cm4gZXJyCgl9Cn0KCi8vIFNodXRkb3duIHBlcmZvcm1zIGEgZ3JhY2VmdWwgc2h1dGRvd24gb3V0c2lkZSBvZiBSdW46IGl0IHN0b3BzIGFjY2VwdGluZwovLyBuZXcgY29ubmVjdGlvbnMsIGRyYWlucyBpbi1mbGlnaHQgcmVxdWVzdHMsIGFuZCBydW5zIHNodXRkb3duIGhvb2tzLiBUaGUKLy8gY29udGV4dCBib3VuZHMgdGhlIHdob2xlIG9wZXJhdGlvbi4KZnVuYyAocyAqU2VydmVyKSBTaHV0ZG93bihjdHggY29udGV4dC5Db250ZXh0KSBlcnJvciB7CglyZXR1cm4gcy5ncmFjZWZ1bChjdHgpCn0KCi8vIHNlcnZlIHJ1bnMgdGhlIGxpc3RlbmVyOyBodHRwLkVyclNlcnZlckNsb3NlZCBpcyBhIGNsZWFuIGV4aXQuCmZ1bmMgKHMgKlNlcnZlcikgc2VydmUoKSBlcnJvciB7CglzLmxvZ2dlci5JbmZvKCJsaXN0ZW5pbmciLCAiYWRkciIsIHMuc3J2LkFkZHIsICJ0bHMiLCBzLmNlcnRGaWxlICE9ICIiKQoJdmFyIGVyciBlcnJvcgoJaWYgcy5jZXJ0RmlsZSAhPSAiIiB7CgkJZXJyID0gcy5zcnYuTGlzdGVuQW5kU2VydmVUTFMocy5jZXJ0RmlsZSwgcy5rZXlGaWxlKQoJfSBlbHNlIHsKCQllcnIgPSBzLnNydi5MaXN0ZW5BbmRTZXJ2ZSgpCgl9CglpZiBlcnJvcnMuSXMoZXJyLCBodHRwLkVyclNlcnZlckNsb3NlZCkgewoJCXJldHVybiBuaWwKCX0KCXJldHVybiBmbXQuRXJyb3JmKCJncmFjZWZ1bDogc2VydmU6ICV3IiwgZXJyKQp9CgovLyBncmFjZWZ1bCBzdG9wcyB0aGUgbGlzdGVuZXIsIGRyYWlucyByZXF1ZXN0cywgYW5kIHJ1bnMgaG9va3MgaW4gb3JkZXIuCmZ1bmMgKHMgKlNlcnZlcikgZ3JhY2VmdWwoY3R4IGNvbnRleHQuQ29udGV4dCkgZXJyb3IgewoJc3RhcnQgOj0gdGltZS5Ob3coKQoKCWlmIGVyciA6PSBzLnNydi5TaHV0ZG93bihjdHgpOyBlcnIgIT0gbmlsIHsKCQlzLmxvZ2dlci5FcnJvcigiaHR0cCBzaHV0ZG93biBmYWlsZWQiLCAiZXJyb3IiLCBlcnIpCgkJcmV0dXJuIGZtdC5FcnJvcmYoImdyYWNlZnVsOiBodHRwIHNodXRkb3duOiAldyIsIGVycikKCX0KCglmb3IgaSwgaG9vayA6PSByYW5nZSBzLmhvb2tzIHsKCQlpZiBlcnIgOj0gaG9vayhjdHgpOyBlcnIgIT0gbmlsIHsKCQkJLy8gTG9nZ2VkLCBuZXZlciBmYXRhbDogb25lIG1pc2JlaGF2aW5nIGhvb2sgbXVzdCBub3QKCQkJLy8gcHJldmVudCB0aGUgcmVzdCBvZiB0aGUgY2xlYW51cCBmcm9tIHJ1bm5pbmcuCgkJCXMubG9nZ2VyLkVycm9yKCJzaHV0ZG93biBob29rIGZhaWxlZCIsICJob29rIiwgaSwgImVycm9yIiwgZXJyKQoJCX0KCX0KCglzLmxvZ2dlci5JbmZvKCJzaHV0ZG93biBjb21wbGV0ZSIsICJkdXJhdGlvbiIsIHRpbWUuU2luY2Uoc3RhcnQpLlJvdW5kKHRpbWUuTWlsbGlzZWNvbmQpKQoJcmV0dXJuIG5pbAp9Cg==
+// Package graceful runs an [http.Server] with sane production timeouts and
+// graceful shutdown.
+//
+// It wires signal handling (SIGINT/SIGTERM), applies timeout defaults that
+// protect against slow clients, and drains in-flight requests before exiting.
+// Shutdown hooks let you close database pools, flush telemetry, and release
+// other resources within the shutdown deadline.
+//
+// A minimal program:
+//
+//	mux := http.NewServeMux()
+//	mux.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
+//		w.WriteHeader(http.StatusOK)
+//	})
+//
+//	srv := graceful.New(mux,
+//		graceful.WithAddr(":8080"),
+//		graceful.WithOnShutdown(func(ctx context.Context) error {
+//			return db.Close()
+//		}),
+//	)
+//	if err := srv.Run(context.Background()); err != nil {
+//		log.Fatal(err)
+//	}
+package graceful
+
+import (
+	"context"
+	"errors"
+	"fmt"
+	"log/slog"
+	"net/http"
+	"os"
+	"os/signal"
+	"syscall"
+	"time"
+)
+
+// Production timeout defaults. Every one of them exists because something
+// broke in production without it:
+//
+//   - ReadHeaderTimeout: the slowloris guard. Headers must arrive fast;
+//     the body can take longer.
+//   - ReadTimeout: bounds the entire request read, body included.
+//   - WriteTimeout: bounds the entire response write, handler time included.
+//     Keep it above your slowest legitimate handler.
+//   - IdleTimeout: how long a keep-alive connection may sit idle.
+//   - ShutdownTimeout: how long in-flight requests and hooks get during
+//     shutdown before the process gives up and exits.
+const (
+	DefaultAddr              = ":8080"
+	DefaultReadHeaderTimeout = 5 * time.Second
+	DefaultReadTimeout       = 10 * time.Second
+	DefaultWriteTimeout      = 30 * time.Second
+	DefaultIdleTimeout       = 120 * time.Second
+	DefaultShutdownTimeout   = 20 * time.Second
+)
+
+// Hook runs during graceful shutdown with the shutdown context, which is
+// cancelled when ShutdownTimeout elapses. Use hooks to close database pools,
+// flush telemetry, or release any other resource. A hook that returns an
+// error is logged; it never aborts the shutdown of the remaining hooks.
+type Hook func(ctx context.Context) error
+
+// Server is an http.Server with production timeouts, signal handling, and
+// graceful shutdown. The zero value is not usable; construct one with New.
+type Server struct {
+	srv             *http.Server
+	shutdownTimeout time.Duration
+	logger          *slog.Logger
+	hooks           []Hook
+	certFile        string
+	keyFile         string
+}
+
+// Option configures a Server.
+type Option func(*Server)
+
+// WithAddr sets the listen address. Default DefaultAddr (":8080").
+func WithAddr(addr string) Option {
+	return func(s *Server) { s.srv.Addr = addr }
+}
+
+// WithReadHeaderTimeout sets the maximum time to read request headers.
+// Default DefaultReadHeaderTimeout. This is your slowloris protection;
+// keep it small.
+func WithReadHeaderTimeout(d time.Duration) Option {
+	return func(s *Server) { s.srv.ReadHeaderTimeout = d }
+}
+
+// WithReadTimeout sets the maximum time to read the full request, body
+// included. Default DefaultReadTimeout.
+func WithReadTimeout(d time.Duration) Option {
+	return func(s *Server) { s.srv.ReadTimeout = d }
+}
+
+// WithWriteTimeout sets the maximum time to write the full response,
+// handler execution included. Default DefaultWriteTimeout. Raise it if you
+// serve legitimately slow endpoints (exports, SSE); lower it otherwise.
+func WithWriteTimeout(d time.Duration) Option {
+	return func(s *Server) { s.srv.WriteTimeout = d }
+}
+
+// WithIdleTimeout sets the maximum time a keep-alive connection may stay
+// idle. Default DefaultIdleTimeout.
+func WithIdleTimeout(d time.Duration) Option {
+	return func(s *Server) { s.srv.IdleTimeout = d }
+}
+
+// WithShutdownTimeout sets how long graceful shutdown may take before the
+// shutdown context is cancelled. Default DefaultShutdownTimeout. It must
+// cover your slowest in-flight request plus every shutdown hook.
+func WithShutdownTimeout(d time.Duration) Option {
+	return func(s *Server) { s.shutdownTimeout = d }
+}
+
+// WithLogger sets the logger used for lifecycle events. Default is a text
+// slog logger writing to stderr. A nil logger keeps the default.
+func WithLogger(l *slog.Logger) Option {
+	return func(s *Server) {
+		if l != nil {
+			s.logger = l
+		}
+	}
+}
+
+// WithOnShutdown appends hooks run, in order, during graceful shutdown after
+// the HTTP listener has stopped accepting new connections. Each hook gets
+// the shutdown context; hook errors are logged and never abort shutdown.
+func WithOnShutdown(hooks ...Hook) Option {
+	return func(s *Server) { s.hooks = append(s.hooks, hooks...) }
+}
+
+// WithTLS enables HTTPS. Both files must be set or neither; passing only
+// one is a configuration error reported by Run.
+func WithTLS(certFile, keyFile string) Option {
+	return func(s *Server) {
+		s.certFile = certFile
+		s.keyFile = keyFile
+	}
+}
+
+// New builds a Server around handler with production timeout defaults,
+// overridden by opts.
+func New(handler http.Handler, opts ...Option) *Server {
+	s := &Server{
+		srv: &http.Server{
+			Addr:              DefaultAddr,
+			Handler:           handler,
+			ReadHeaderTimeout: DefaultReadHeaderTimeout,
+			ReadTimeout:       DefaultReadTimeout,
+			WriteTimeout:      DefaultWriteTimeout,
+			IdleTimeout:       DefaultIdleTimeout,
+		},
+		shutdownTimeout: DefaultShutdownTimeout,
+		logger:          slog.New(slog.NewTextHandler(os.Stderr, nil)),
+	}
+	for _, opt := range opts {
+		opt(s)
+	}
+	return s
+}
+
+// HTTPServer exposes the underlying [http.Server] for advanced use
+// (custom ConnState hooks, http2 configuration, etc.).
+func (s *Server) HTTPServer() *http.Server { return s.srv }
+
+// Run starts the server and blocks until ctx is cancelled or the process
+// receives SIGINT/SIGTERM, then gracefully shuts down: the listener stops
+// accepting new connections, in-flight requests are drained, and shutdown
+// hooks run. It returns nil on clean shutdown.
+//
+// If the server fails to start (bad address, TLS misconfiguration), Run
+// returns that error instead of blocking.
+func (s *Server) Run(ctx context.Context) error {
+	if (s.certFile == "") != (s.keyFile == "") {
+		return errors.New("graceful: WithTLS requires both cert and key files")
+	}
+
+	ctx, stop := signal.NotifyContext(ctx, syscall.SIGINT, syscall.SIGTERM)
+	defer stop()
+
+	errCh := make(chan error, 1)
+	go func() { errCh <- s.serve() }()
+
+	select {
+	case <-ctx.Done():
+		s.logger.Info("shutdown initiated", "reason", ctx.Err())
+		shutCtx, cancel := context.WithTimeout(context.Background(), s.shutdownTimeout)
+		defer cancel()
+		return errors.Join(s.graceful(shutCtx), <-errCh)
+	case err := <-errCh:
+		return err
+	}
+}
+
+// Shutdown performs a graceful shutdown outside of Run: it stops accepting
+// new connections, drains in-flight requests, and runs shutdown hooks. The
+// context bounds the whole operation.
+func (s *Server) Shutdown(ctx context.Context) error {
+	return s.graceful(ctx)
+}
+
+// serve runs the listener; http.ErrServerClosed is a clean exit.
+func (s *Server) serve() error {
+	s.logger.Info("listening", "addr", s.srv.Addr, "tls", s.certFile != "")
+	var err error
+	if s.certFile != "" {
+		err = s.srv.ListenAndServeTLS(s.certFile, s.keyFile)
+	} else {
+		err = s.srv.ListenAndServe()
+	}
+	if errors.Is(err, http.ErrServerClosed) {
+		return nil
+	}
+	return fmt.Errorf("graceful: serve: %w", err)
+}
+
+// graceful stops the listener, drains requests, and runs hooks in order.
+func (s *Server) graceful(ctx context.Context) error {
+	start := time.Now()
+
+	if err := s.srv.Shutdown(ctx); err != nil {
+		s.logger.Error("http shutdown failed", "error", err)
+		return fmt.Errorf("graceful: http shutdown: %w", err)
+	}
+
+	for i, hook := range s.hooks {
+		if err := hook(ctx); err != nil {
+			// Logged, never fatal: one misbehaving hook must not
+			// prevent the rest of the cleanup from running.
+			s.logger.Error("shutdown hook failed", "hook", i, "error", err)
+		}
+	}
+
+	s.logger.Info("shutdown complete", "duration", time.Since(start).Round(time.Millisecond))
+	return nil
+}
