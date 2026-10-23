@@ -3,6 +3,7 @@
 [![CI](https://github.com/parsaaftabi/graceful/actions/workflows/ci.yml/badge.svg)](https://github.com/parsaaftabi/graceful/actions/workflows/ci.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/parsaaftabi/graceful.svg)](https://pkg.go.dev/github.com/parsaaftabi/graceful)
 [![Go Report Card](https://goreportcard.com/badge/github.com/parsaaftabi/graceful)](https://goreportcard.com/report/github.com/parsaaftabi/graceful)
+[![codecov](https://codecov.io/gh/parsaaftabi/graceful/graph/badge.svg)](https://codecov.io/gh/parsaaftabi/graceful)
 [![Release](https://img.shields.io/github/v/release/parsaaftabi/graceful)](https://github.com/parsaaftabi/graceful/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
