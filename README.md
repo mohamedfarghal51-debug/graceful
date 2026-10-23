@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/parsaaftabi/graceful/actions/workflows/ci.yml/badge.svg)](https://github.com/parsaaftabi/graceful/actions/workflows/ci.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/parsaaftabi/graceful.svg)](https://pkg.go.dev/github.com/parsaaftabi/graceful)
+[![Go Report Card](https://goreportcard.com/badge/github.com/parsaaftabi/graceful)](https://goreportcard.com/report/github.com/parsaaftabi/graceful)
+[![Release](https://img.shields.io/github/v/release/parsaaftabi/graceful)](https://github.com/parsaaftabi/graceful/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Production-grade HTTP server lifecycle for Go: sane timeout defaults, SIGINT/SIGTERM handling, in-flight request draining, and ordered shutdown hooks. Zero dependencies.
@@ -35,10 +37,21 @@ Every production Go HTTP server needs the same five things, and the standard lib
 
 `graceful` wires all five in ~200 lines you could read in one sitting.
 
+## graceful vs. a raw `http.Server`
+
+| Concern | Raw `http.Server` | `graceful` |
+|---|---|---|
+| Timeouts | All default to `0` (unbounded) | Production defaults, overridable |
+| SIGINT/SIGTERM | Not handled | Handled via `signal.NotifyContext` |
+| In-flight requests on shutdown | Dropped unless you wire `Shutdown` yourself | Drained within `ShutdownTimeout` |
+| Cleanup (DB pools, telemetry) | Manual, easy to order wrong | Ordered hooks, one failing hook never blocks the rest |
+| Shutdown deadline | Manual | Built in (`20s` default) |
+| Dependencies | — | Zero |
+
 ## Install
 
 ```bash
-go get github.com/parsaaftabi/graceful
+go get github.com/parsaaftabi/graceful@v0.1.0
 ```
 
 Requires Go 1.24+.
@@ -60,12 +73,23 @@ Every default is overridable with a `With...` option. If you serve legitimately 
 
 Hooks run in order after the listener stops accepting new connections. Each receives the shutdown context (cancelled at `ShutdownTimeout`). A failing hook is logged and never aborts the remaining hooks — one misbehaving cleanup must not block the rest.
 
+## Examples
+
+- [examples/basic](examples/basic) — a runnable service with `/healthz` and a `/slow` endpoint, so you can press Ctrl+C mid-request and watch the in-flight request finish before the process exits:
+
+  ```bash
+  cd examples/basic && go run .
+  ```
+
+- Runnable examples also live on [pkg.go.dev](https://pkg.go.dev/github.com/parsaaftabi/graceful#pkg-examples).
+
 ## Behavior notes
 
 - `Run` blocks until the context is cancelled or SIGINT/SIGTERM arrives, then returns `nil` on clean shutdown.
 - `http.ErrServerClosed` is treated as a clean exit, never an error.
 - `WithTLS` requires both cert and key; passing only one is a configuration error returned by `Run`.
 - `HTTPServer()` exposes the underlying `*http.Server` for advanced tweaks (custom `ConnState`, HTTP/2 config).
+- `Shutdown(ctx)` performs a graceful shutdown outside of `Run` when you manage the listener yourself.
 
 ## License
 

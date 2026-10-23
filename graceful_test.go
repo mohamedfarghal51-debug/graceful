@@ -2,10 +2,21 @@ package graceful
 
 import (
 	"context"
+	"crypto/ecdsa"
+	"crypto/elliptic"
+	"crypto/rand"
+	"crypto/tls"
+	"crypto/x509"
+	"crypto/x509/pkix"
+	"encoding/pem"
 	"errors"
 	"io"
+	"log/slog"
+	"math/big"
 	"net"
 	"net/http"
+	"os"
+	"path/filepath"
 	"sync/atomic"
 	"testing"
 	"time"
@@ -225,5 +236,133 @@ func TestRun_TLSConfigError(t *testing.T) {
 	s := New(http.NotFoundHandler(), WithTLS("cert.pem", ""))
 	if err := s.Run(context.Background()); err == nil {
 		t.Error("expected error for cert-without-key, got nil")
+	}
+}
+
+func TestHTTPServerAccessor(t *testing.T) {
+	s := New(http.NotFoundHandler(), WithAddr("127.0.0.1:12345"))
+	if s.HTTPServer() != s.srv {
+		t.Error("HTTPServer() did not return the underlying server")
+	}
+	if s.HTTPServer().Addr != "127.0.0.1:12345" {
+		t.Errorf("Addr = %q", s.HTTPServer().Addr)
+	}
+}
+
+func TestWithLogger(t *testing.T) {
+	def := New(http.NotFoundHandler(), WithLogger(nil))
+	if def.logger == nil {
+		t.Error("nil logger replaced the default")
+	}
+	custom := slog.New(slog.NewTextHandler(io.Discard, nil))
+	s := New(http.NotFoundHandler(), WithLogger(custom))
+	if s.logger != custom {
+		t.Error("custom logger was not applied")
+	}
+}
+
+func TestRun_BadAddress(t *testing.T) {
+	s := New(http.NotFoundHandler(), WithAddr("127.0.0.1:notaport"))
+	if err := s.Run(context.Background()); err == nil {
+		t.Error("expected error for bad listen address, got nil")
+	}
+}
+
+func TestShutdown_Standalone(t *testing.T) {
+	addr := freeAddr(t)
+	var hookRan atomic.Bool
+	s := New(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("ok"))
+	}), WithAddr(addr), WithOnShutdown(func(ctx context.Context) error {
+		hookRan.Store(true)
+		return nil
+	}))
+
+	serveErr := make(chan error, 1)
+	go func() { serveErr <- s.serve() }()
+	waitUp(t, addr)
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+	if err := s.Shutdown(ctx); err != nil {
+		t.Fatalf("Shutdown returned %v", err)
+	}
+	if !hookRan.Load() {
+		t.Error("shutdown hook did not run")
+	}
+	if err := <-serveErr; err != nil {
+		t.Errorf("serve returned %v after Shutdown, want nil", err)
+	}
+}
+
+// writeTestCert generates a self-signed cert/key pair in t.TempDir.
+func writeTestCert(t *testing.T) (certFile, keyFile string) {
+	t.Helper()
+	key, err := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
+	if err != nil {
+		t.Fatal(err)
+	}
+	tmpl := x509.Certificate{
+		SerialNumber: big.NewInt(1),
+		Subject:      pkix.Name{CommonName: "localhost"},
+		NotBefore:    time.Now().Add(-time.Hour),
+		NotAfter:     time.Now().Add(time.Hour),
+		KeyUsage:     x509.KeyUsageDigitalSignature | x509.KeyUsageKeyEncipherment,
+		ExtKeyUsage:  []x509.ExtKeyUsage{x509.ExtKeyUsageServerAuth},
+		DNSNames:     []string{"localhost"},
+		IPAddresses:  []net.IP{net.ParseIP("127.0.0.1")},
+	}
+	der, err := x509.CreateCertificate(rand.Reader, &tmpl, &tmpl, &key.PublicKey, key)
+	if err != nil {
+		t.Fatal(err)
+	}
+	dir := t.TempDir()
+	certFile = filepath.Join(dir, "cert.pem")
+	keyFile = filepath.Join(dir, "key.pem")
+	if err := os.WriteFile(certFile, pem.EncodeToMemory(&pem.Block{Type: "CERTIFICATE", Bytes: der}), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	keyDER, err := x509.MarshalECPrivateKey(key)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(keyFile, pem.EncodeToMemory(&pem.Block{Type: "EC PRIVATE KEY", Bytes: keyDER}), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	return certFile, keyFile
+}
+
+func TestRun_TLS(t *testing.T) {
+	certFile, keyFile := writeTestCert(t)
+	addr := freeAddr(t)
+	s := New(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("secure"))
+	}), WithAddr(addr), WithTLS(certFile, keyFile))
+
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	runErr := make(chan error, 1)
+	go func() { runErr <- s.Run(ctx) }()
+	waitUp(t, addr)
+
+	client := &http.Client{Transport: &http.Transport{TLSClientConfig: &tls.Config{InsecureSkipVerify: true}}} // test-only self-signed cert
+	resp, err := client.Get("https://" + addr)
+	if err != nil {
+		t.Fatal(err)
+	}
+	body, _ := io.ReadAll(resp.Body)
+	resp.Body.Close()
+	if string(body) != "secure" {
+		t.Errorf("body = %q, want %q", body, "secure")
+	}
+
+	cancel()
+	select {
+	case err := <-runErr:
+		if err != nil {
+			t.Errorf("Run returned %v, want nil", err)
+		}
+	case <-time.After(5 * time.Second):
+		t.Fatal("Run did not return after cancel")
 	}
 }
